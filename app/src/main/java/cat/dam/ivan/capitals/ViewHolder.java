@@ -21,7 +21,7 @@ public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickL
         capital =  itemView.findViewById(R.id.tv_country_capital);
         latitud = itemView.findViewById(R.id.tv_country_latitud);
         longitud = itemView.findViewById(R.id.tv_country_longitud);
-        image = itemView.findViewById(R.id.iv_item_image);
+        image = itemView.findViewById(R.id.iv_country_image);
         context = parent;
         // Defineix clic listener per els elements de la llista
         itemView.setOnClickListener(this);

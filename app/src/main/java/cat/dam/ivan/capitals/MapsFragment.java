@@ -19,6 +19,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsFragment extends Fragment {
 
+    //Creem un objecte de tipus Country per poder afagar les dades de longitud i latitud del pais
     private Country country;
 
     //Button btnBack;
@@ -36,9 +37,10 @@ public class MapsFragment extends Fragment {
          */
         @Override
         public void onMapReady(GoogleMap googleMap) {
-            LatLng sydney = new LatLng(country.getLatitude(), country.getLongitude());
-            googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+            //Afegim un marcador al mapa amb la posició del pais
+            LatLng selectCountry = new LatLng(country.getLatitude(), country.getLongitude());
+            googleMap.addMarker(new MarkerOptions().position(selectCountry).title("Pais seleccionat"));
+            googleMap.moveCamera(CameraUpdateFactory.newLatLng(selectCountry));
         }
     };
 
@@ -54,16 +56,6 @@ public class MapsFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         return inflater.inflate(R.layout.fragment_maps, container, false);
-        /*View v = inflater.inflate(R.layout.fragment_maps, container, false);
-        btnBack = v.findViewById(R.id.btn_back);
-btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getActivity().onBackPressed();
-            }
-        });*/
-
-        //return v;
     }
 
     @Override

@@ -2,6 +2,7 @@ package cat.dam.ivan.capitals;
 
 public class Country
 {
+    // Atributs de la classe
     private String name;
     private String code;
     private String capital;
@@ -9,6 +10,7 @@ public class Country
     private double latitude;
     private double longitude;
 
+    // Constructor de la classe
     public Country(String name, String code, String capital, int imageResourceID, double latitude, double longitude) {
         this.name = name;
         this.code = code;
@@ -17,6 +19,8 @@ public class Country
         this.latitude = latitude;
         this.longitude = longitude;
     }
+
+    // Getters i setters
 
     public String getName() {
         return name;
